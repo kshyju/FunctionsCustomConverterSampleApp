@@ -22,7 +22,7 @@ namespace CustomConverterSampleApp
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
 
-            response.WriteString("Product name:" + product.Name);
+            response.WriteString("Product name:" + product?.Name);
 
             return response;
         }

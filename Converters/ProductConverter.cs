@@ -21,9 +21,14 @@ namespace CustomConverterSampleApp.Converters
                 return new ValueTask<ConversionResult>(ConversionResult.Unhandled());
             }
 
+            if (!context.FunctionContext.BindingContext.BindingData.TryGetValue("productId", out var prodIdObj))
+            {
+                return new ValueTask<ConversionResult>(ConversionResult.Unhandled());
+            }
+
             _logger.LogInformation("Populating Product information");
 
-            var result = new Product { Name = "PROD-" + DateTime.Now.ToString() };
+            var result = new Product { Name = "PROD-" + prodIdObj.ToString() };
             var conversionResult = ConversionResult.Success(result);
 
             return new ValueTask<ConversionResult>(conversionResult);
