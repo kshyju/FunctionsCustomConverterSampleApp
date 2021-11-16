@@ -1,6 +1,6 @@
 Sample app demonstrating usage of custom converters.
 
-### What are InputConverters ?
+### What are Input converters ?
 
 Input converters provides a mechanism for populating input parameters of a function from the incoming function invocation. They convert the raw data from the invocation request to types you can work with. There are 7 built-in input converters ships with every functions app which should handle most of the use cases.
 
