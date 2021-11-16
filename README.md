@@ -142,4 +142,4 @@ public class CustomerConverter : IInputConverter
 ````
 
 
-To run this sample app, set an environment variable called `AZURE_STORAGE_CONNECTION_STRING` and store the azure storage connection string value in that. The sample app has a converter which enhances a blob trigger by populating a `CloudBlob` object.
+To run this sample app, set an environment variable called `AZURE_STORAGE_CONNECTION_STRING` and store the azure storage connection string value in that. The sample app has a converter which enhances a blob trigger by populating a `CloudBlob` object when a new entry is added to the `samples-workitems` container in the storage account.
